@@ -89,28 +89,28 @@ const App = () => {
   };
 
   return (
-    <Container className='p-5'>
-      <ToastContainer className='bottom-center' />
+    <Container className="p-5">
+      <ToastContainer className="bottom-center" />
       <Row>
-        <Col md={6} className='offset-md-3'>
+        <Col md={6} className="offset-md-3">
           {winMessage ? (
-            <div className='mb-2 mt-2'>
-              <h1 className='text-success text-uppercase text-center'>
+            <div className="mb-2 mt-2">
+              <h1 className="text-success text-uppercase text-center">
                 {winMessage}
               </h1>
-              <Button color='success' block onClick={reloadGame}>
+              <Button color="success" block onClick={reloadGame}>
                 Reload the game!!
               </Button>
             </div>
           ) : (
-            <h1 className='text-center text-warning'>
+            <h1 className="text-center text-warning">
               {isCross ? "Cross" : "Circle"} turns
             </h1>
           )}
-          <div className='grid'>
+          <div className="grid">
             {itemArray.map((item, index) => (
-              <Card color='warning' onClick={() => changeItem(index)}>
-                <CardBody className='box'>
+              <Card color="warning" onClick={() => changeItem(index)}>
+                <CardBody className="box">
                   <Icon name={item} />
                 </CardBody>
               </Card>
